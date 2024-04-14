@@ -16,7 +16,7 @@ const Signin = () => {
   };
   console.log(formData);
   const handleSubmit = async (e) => {
-    
+    e.preventDefault();
     try {
       if(formData === null){
         setError("Undefined Data!!");

@@ -16,7 +16,7 @@ const Signup = () => {
   };
   console.log(formData);
   const handleSubmit = async (e) => {
-    
+    e.preventDefault();
     try {
       if(formData === null){
         setError("Undefined Data!!");
@@ -39,7 +39,7 @@ const Signup = () => {
       }
       setLoading(false);
       setError(null);
-      console.log(data);
+      // console.log(data);
       navigate('/sign-in');
     } catch (error) {
       setLoading(false);
